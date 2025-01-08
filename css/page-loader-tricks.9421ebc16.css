@@ -2088,14 +2088,15 @@ textarea.w-input, textarea.w-select {
 :root {
   --white: white;
   --black: black;
+  --grey: #2e343a;
   --red: #eb412b;
 }
 
 body {
   background-color: var(--white);
-  color: var(--black);
+  color: var(--grey);
   letter-spacing: 0;
-  font-family: PM Grotesk, sans-serif;
+  font-family: Circular, sans-serif;
   font-size: 1vw;
   line-height: 1.6;
 }
@@ -2105,7 +2106,7 @@ h1 {
   margin-bottom: 0;
   font-size: 3.28em;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 3;
 }
 
 h2 {
@@ -2273,7 +2274,7 @@ blockquote {
 .loader {
   z-index: 1000;
   background-color: var(--white);
-  color: var(--black);
+  color: var(--grey);
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch;
@@ -2297,7 +2298,7 @@ blockquote {
 
 .h1 {
   font-size: 3.28em;
-  line-height: 1.2;
+  line-height: 3;
 }
 
 .h2 {
@@ -2343,7 +2344,7 @@ blockquote {
 }
 
 .loader_top {
-  color: var(--red);
+  color: var(--white);
   border-bottom: 2px solid #000;
   position: relative;
 }
@@ -2372,6 +2373,7 @@ blockquote {
 
 .loader_number {
   padding-bottom: .14em;
+  color: --grey;
   font-size: 20.42em;
   font-weight: 500;
   line-height: .55;
@@ -2394,7 +2396,7 @@ blockquote {
   padding-bottom: .3em;
   font-size: 12em;
   font-weight: 500;
-  line-height: .8;
+  line-height: 1;
 }
 
 @media screen and (max-width: 991px) {
@@ -2435,37 +2437,50 @@ blockquote {
 }
 
 @font-face {
-  font-family: 'PM Grotesk';
-  src: url('../images/pmgrotesk-bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
+  font-family: 'Circular';
+  src: url('../images/5bc260f1898dceac79bd3fa4_circularstd-mediumitalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
 }
 @font-face {
-  font-family: 'PM Grotesk';
-  src: url('../images/pmgrotesk-light.otf') format('opentype');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'PM Grotesk';
-  src: url('../images/pmgrotesk-medium.otf') format('opentype');
+  font-family: 'Circular';
+  src: url('../images/5bc260f2ac42919d99d8e7d1_circularstd-medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
-  font-family: 'PM Grotesk';
-  src: url('../images/pmgrotesk-thin.otf') format('opentype');
-  font-weight: 100;
+  font-family: 'Circular';
+  src: url('../images/5bc260f1e46b0e4023604a5e_circularstd-blackitalic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Circular';
+  src: url('../images/5bc260f19f9d5c63f46e3764_circularstd-black.otf') format('opentype');
+  font-weight: 900;
   font-style: normal;
-  font-display: swap;
 }
 @font-face {
-  font-family: 'PM Grotesk';
-  src: url('../images/pmgrotesk-regular.otf') format('opentype');
+  font-family: 'Circular';
+  src: url('../images/5bc260f1ccad9470e56cd2a0_circularstd-bolditalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Circular';
+  src: url('../images/5bc260f19f9d5c55346e3766_circularstd-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Circular';
+  src: url('../images/5bc260f15a5ed9e2e070538c_circularstd-bookitalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Circular';
+  src: url('../images/5bc260f1e46b0e0b9c604a5f_circularstd-book.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
 }
