@@ -224,7 +224,8 @@ body {
   background-color: #fff;
   min-height: 100%;
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Circular', sans-serif;
+  font-weight: 500;
   font-size: 14px;
   line-height: 20px;
 }
@@ -2221,9 +2222,50 @@ body {
 }
 
 @font-face {
-  font-family: 'General Sans';
-  src: url('../images/generalsans-variable.woff2') format('woff2');
-  font-weight: 200 700;
+  font-family: 'Circular';
+  src: url('images/5bc260f1898dceac79bd3fa4_circularstd-mediumitalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Circular';
+  src: url('images/5bc260f2ac42919d99d8e7d1_circularstd-medium.otf') format('opentype');
+  font-weight: 500;
   font-style: normal;
-  font-display: swap;
+}
+@font-face {
+  font-family: 'Circular';
+  src: url('./images/5bc260f1e46b0e4023604a5e_circularstd-blackitalic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Circular';
+  src: url('./images/5bc260f19f9d5c63f46e3764_circularstd-black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Circular';
+  src: url('./images/5bc260f1ccad9470e56cd2a0_circularstd-bolditalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Circular';
+  src: url('./images/5bc260f19f9d5c55346e3766_circularstd-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Circular';
+  src: url('./images/5bc260f15a5ed9e2e070538c_circularstd-bookitalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Circular';
+  src: url('images/5bc260f1e46b0e0b9c604a5f_circularstd-book.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
 }
