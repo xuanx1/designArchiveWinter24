@@ -1,6 +1,6 @@
 ## [Design Archive](https://xuanx1.github.io/designArchiveWinter24/loading.html)
-![loading](https://github.com/user-attachments/assets/109b4848-dfb6-473a-943d-1e763428d747)
-![main](https://github.com/user-attachments/assets/2766428a-5501-4c69-80f9-cd9091f0a1d0)
+![desktop_mockup-01](https://github.com/user-attachments/assets/374419b1-5bda-4eae-9c77-d867f05f2757)
+![desktop_mockup-02](https://github.com/user-attachments/assets/f22a04dc-47f0-46ad-b33e-a3791e1e2bdc)
 
 
 
