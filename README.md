@@ -3,7 +3,7 @@ https://xuanx1.github.io/designArchiveWinter24/loading.html
 
 -add screenshots
 
-![a-09](https://github.com/user-attachments/assets/0a921205-bd86-4e45-8333-c5ce2bbc3ed5)
+
 ## [Physical Portfolio](https://heyzine.com/flip-book/c49f6eeed2.html)
 
 ![2](https://github.com/user-attachments/assets/9927e6ee-6ab1-4557-87e8-a6fb5f8780cc)
