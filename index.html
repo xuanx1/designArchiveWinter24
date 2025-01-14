@@ -27,7 +27,7 @@
     <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon" />
 </head>
     
-<!-- cv stadia maps api + convert gis final map to js, bg sketches png - gradient random sketches, favicon durian; remove hamburger -->
+<!-- cv stadia maps api + convert gis final map to js, bg fade in random sketches(no overlap), randomise size, position and fade edge, favicon durian -->
 
 <body class="body">
     <div data-collapse="medium" data-animation="default" data-duration="400" class="footer w-nav">
@@ -60,6 +60,102 @@
 
         </div>
     </div>
+
+    <div class="bg-images-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden;"></div>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            const bgImages = [];
+            const bgFolder = 'bg/';
+            const bgExtension = '.png';
+            const totalImages = 47; // Assuming there are 47 images, adjust this number as needed
+            for (let i = 1; i <= totalImages; i++) {
+                bgImages.push(`${bgFolder}sketch png-${i}${bgExtension}`);
+            }
+
+            function getRandomImages(num) {
+                const shuffled = bgImages.sort(() => 0.5 - Math.random());
+                return shuffled.slice(0, num);
+            }
+
+            function getRandomScale() {
+                return Math.random() * 0.5 + 0.75; // Random scale between 0.75 and 1.25
+            }
+
+            function getRandomPosition(usedPositions, imgSize) {
+                let position;
+                let overlap;
+                do {
+                    overlap = false;
+                    position = {
+                        top: Math.random() * (100 - imgSize) + '%',
+                        left: Math.random() * (100 - imgSize) + '%'
+                    };
+                    for (let pos of usedPositions) {
+                        if (Math.abs(parseFloat(pos.top) - parseFloat(position.top)) < imgSize && Math.abs(parseFloat(pos.left) - parseFloat(position.left)) < imgSize) {
+                            overlap = true;
+                            break;
+                        }
+                    }
+                } while (overlap);
+                return position;
+            }
+
+            function fadeInImages(images) {
+                const container = document.querySelector('.bg-images-container');
+                container.innerHTML = '';
+                const usedPositions = [];
+                const imgSize = 20; // Image size in percentage
+                images.forEach((image, index) => {
+                    const imgDiv = document.createElement('div');
+                    imgDiv.className = 'bg-image';
+                    imgDiv.style.backgroundImage = `url('${image}')`;
+                    imgDiv.style.backgroundSize = 'contain';
+                    imgDiv.style.backgroundPosition = 'center';
+                    imgDiv.style.backgroundRepeat = 'no-repeat';
+                    imgDiv.style.position = 'absolute';
+                    imgDiv.style.width = `${imgSize}vw`;
+                    imgDiv.style.height = `${imgSize}vw`; 
+                    imgDiv.style.opacity = '0';
+                    imgDiv.style.transition = 'opacity 2s, transform 2s';
+                    imgDiv.style.zIndex = '-1';
+                    imgDiv.style.animationDelay = `${index * 0.5}s`;
+                    imgDiv.style.transform = `scale(${getRandomScale()})`;
+
+                    const position = getRandomPosition(usedPositions, imgSize);
+                    usedPositions.push(position);
+
+                    imgDiv.style.top = position.top;
+                    imgDiv.style.left = position.left;
+
+                    container.appendChild(imgDiv);
+                    setTimeout(() => {
+                        imgDiv.style.opacity = '1';
+                    }, 100);
+                });
+            }
+
+            function fadeOutImages() {
+                const images = document.querySelectorAll('.bg-image');
+                images.forEach((imgDiv) => {
+                    imgDiv.style.opacity = '0';
+                });
+            }
+
+            function loopImages() {
+                const images = getRandomImages(7);
+                fadeInImages(images);
+                setTimeout(() => {
+                    fadeOutImages();
+                    setTimeout(loopImages, 2000);
+                }, 4000); // Hold for 4 seconds
+            }
+
+            loopImages();
+        });
+    </script>
+
+
+
     <div data-w-id="fa061627-9dce-4b4e-81a5-da78034dd637" class="wrapper">
         <div data-w-id="041d203b-0238-908f-5fc4-7b8c5f6cd7d3" class="flex">
             <div class="col">
