@@ -43,21 +43,136 @@
   </div>
   <div class="section">
     <div class="list_section">
-      <a href="#" class="link w-inline-block"><img src="images/sunglass-20silhouette-20at-20sunset.png" loading="lazy" width="796.5" alt="" class="img" /></a>
+      <a href="" class="link w-inline-block" data-description="Hypothetical ASEAN Banknote" style="background-color: #3a3a3a;" onclick="showLightbox(event, 'lightbox-asean')"><img src="./images/0_asean-wallet.png" loading="lazy" width="" alt="" class="img" /></a>
 
-      <a href="#" class="link w-inline-block"><img src="images/minimalist-20composition-20with-20neutral-20palette.jpg" loading="lazy" width="863" alt="" class="img" /></a>
+      <div id="lightbox-asean" class="lightbox" style="display:none;">
+        <div class="lightbox-content">
+          <span class="close" onclick="closeLightbox('lightbox-asean')">&times;</span>
+          <div class="lightbox-images">
+        <button class="prev" onclick="changeImage(-1, 'lightbox-asean')">&#10094;</button>
 
-      <a href="#" class="link w-inline-block"><img src="images/serene-20landscape-20with-20monolith.jpg" loading="lazy" width="1778" alt="" class="img" /></a>
+        <img src="./images/asean_all.png" alt="Image 0" class="lightbox-img">
+        <img src="./images/banknote_mock_5_asean.png" alt="Image 1" class="lightbox-img">
+        <img src="./images/banknote_mock_5_asean_polymer.png" alt="Image 2" class="lightbox-img">
+        <img src="./images/banknote_mock_10_asean.png" alt="Image 3" class="lightbox-img">
+        <img src="./images/banknote_mock_10_asean_polymer.png" alt="Image 4" class="lightbox-img">
+        <img src="./images/banknote_mock_50_asean.png" alt="Image 5" class="lightbox-img">
+        <img src="./images/banknote_mock_100_asean.png" alt="Image 6" class="lightbox-img">
+        <img src="./images/banknote_mock_200_asean.png" alt="Image 7" class="lightbox-img">
+        <button class="next" onclick="changeImage(1, 'lightbox-asean')">&#10095;</button>
 
-      <a href="#" class="link w-inline-block"><img src="images/acoustic-20serenity.jpg" loading="lazy" width="600" alt="" class="img" /></a>
+          </div>
+        </div>
+      </div>
 
-      <a href="#" class="link w-inline-block"><img src="images/frosted-20solitude-20at-20dawn.jpg" loading="lazy" width="464" alt="" class="img" /></a>
+      <a href="" class="link w-inline-block" data-description="Bicentennial Singapore" style="background-color: #3a3a3a;" onclick="showLightbox(event, 'lightbox-sg')"><img src="./images/banknote_mock_sg_200.png" loading="lazy" width="" alt="" class="img" /></a>
 
-      <a href="#" class="link w-inline-block"><img src="images/behind-20the-20scenes-20of-20film-20production.jpg" loading="lazy" width="796.5" alt="" class="img" /></a>
+      <div id="lightbox-sg" class="lightbox" style="display:none;">
+        <div class="lightbox-content">
+          <span class="close" onclick="closeLightbox('lightbox-sg')">&times;</span>
+          <div class="lightbox-images">
+        <button class="prev" onclick="changeImage(-1, 'lightbox-sg')">&#10094;</button>
+        <img src="./images/0_sg-200-hand.png" alt="Image 1" class="lightbox-img">
+        <img src="./images/0_sg-200-front.png" alt="Image 2" class="lightbox-img">
+        <img src="./images/0_sg-200-rear.png" alt="Image 3" class="lightbox-img">
+        <button class="next" onclick="changeImage(1, 'lightbox-sg')">&#10095;</button>
+          </div>
+        </div>
+      </div>
 
-      <a href="#" class="link w-inline-block"><img src="images/aerial-20lightness_-20minimalist-20wooden-20staircase-20with-20glass-20balustrade.jpg" loading="lazy" width="600" alt="" class="img" /></a>
+      <style>
+        .lightbox {
+          position: fixed;
+          z-index: 999;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0.8);
+        }
 
-      <a href="#" class="link w-inline-block"><img src="images/solitude-20at-20the-20arched-20corridor.jpg" loading="lazy" width="1456" alt="" class="img" /></a>
+        .lightbox-content {
+          position: relative;
+          margin: auto;
+          padding: 20px;
+          width: 80%;
+          max-width: 700px;
+        }
+
+        .close {
+          position: absolute;
+          top: 10px;
+          right: 25px;
+          color: #fff;
+          font-size: 35px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+
+        .lightbox-images {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .lightbox-img {
+          max-width: 100%;
+          max-height: 100%;
+          transition: transform 0.5s ease;
+          display: none;
+        }
+
+        .lightbox-img.active {
+          display: block;
+        }
+
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+      </style>
+
+      <script>
+        function showLightbox(event, lightboxId) {
+          event.preventDefault();
+          const lightbox = document.getElementById(lightboxId);
+          lightbox.style.display = 'block';
+          const images = lightbox.querySelectorAll('.lightbox-img');
+          images[0].classList.add('active');
+        }
+
+        function closeLightbox(lightboxId) {
+          const lightbox = document.getElementById(lightboxId);
+          lightbox.style.display = 'none';
+          const images = lightbox.querySelectorAll('.lightbox-img');
+          images.forEach(img => img.classList.remove('active'));
+        }
+
+        function changeImage(direction, lightboxId) {
+          const lightbox = document.getElementById(lightboxId);
+          const images = lightbox.querySelectorAll('.lightbox-img');
+          let currentImageIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+          images[currentImageIndex].classList.remove('active');
+          currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+          images[currentImageIndex].classList.add('active');
+        }
+      </script>
+
+      <a href="" class="link w-inline-block" data-description="WEI'S TCM"><img src="./images/wei.png" loading="lazy" width="" alt="" class="img" /></a>
+
+      <a href="" class="link w-inline-block" data-description="Corporate Landing Page"><img src="./images/identities-01.png" loading="lazy" width="" alt="" class="img" /></a>
+
+      <a href="" class="link w-inline-block" data-description="The Bustling Times - Chinese New Year"><img src="./images/cny.png" loading="lazy" width="" alt="" class="img" /></a>
+
+      <a href="" class="link w-inline-block" data-description="Singapore Fintech Awards 2019"><img src="./images/sg_poster.png" loading="lazy" width="" alt="" class="img" /></a>
+
+
     </div>
     <div class="list_selector">
       <div id="list-select" class="btn_selector active">
