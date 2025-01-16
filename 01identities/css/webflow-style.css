@@ -1303,6 +1303,7 @@ textarea.w-input, textarea.w-select {
   .w-nav[data-collapse="medium"] .w-nav-button {
     display: block;
   }
+  
 }
 
 @media screen and (max-width: 767px) {
@@ -1317,6 +1318,7 @@ textarea.w-input, textarea.w-select {
   .w-nav-brand {
     padding-left: 10px;
   }
+  
 }
 
 @media screen and (max-width: 479px) {
@@ -1327,6 +1329,7 @@ textarea.w-input, textarea.w-select {
   .w-nav[data-collapse="tiny"] .w-nav-button {
     display: block;
   }
+  
 }
 
 .w-tabs {
@@ -1386,6 +1389,7 @@ textarea.w-input, textarea.w-select {
   .w-tab-link {
     display: block;
   }
+  
 }
 
 .w-ix-emptyfix:after {
