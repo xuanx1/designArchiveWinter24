@@ -2123,6 +2123,7 @@ body {
 .image-holder.img-3 {
   top: 45%;
   background-image: url("../images/ambitious-studio-rick-barrett-n_kZVc8-pKA-unsplash.jpg");
+  filter: brightness(0.9);
 }
 
 .image-holder.img-1 {
