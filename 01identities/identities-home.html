@@ -43,7 +43,35 @@
   </div>
   <div class="section">
     <div class="list_section">
-      <a href="" class="link w-inline-block" data-description="Hypothetical ASEAN Banknote" style="background-color: #3a3a3a;" onclick="showLightbox(event, 'lightbox-asean')"><img src="./images/0_asean-wallet.png" loading="lazy" width="" alt="" class="img" /></a>
+
+      <a href="" class="link w-inline-block" data-description="Borbone Product Display"><img src="./images/borbone-01.png" loading="lazy" width="" alt="" class="img" /></a>
+      <script>
+        let borboneImages = ["./images/borbone-01.png", "./images/borbone-02.png"];
+        let currentIndex = 0;
+        const borboneLink = document.querySelector('.link[data-description="Borbone Product Display"] img');
+
+        setInterval(() => {
+          borboneLink.style.transition = 'transform 0.5s ease-in-out';
+          borboneLink.style.transform = 'translateX(-100%)';
+          setTimeout(() => {
+        currentIndex = (currentIndex + 1) % borboneImages.length;
+        borboneLink.src = borboneImages[currentIndex];
+        if (currentIndex === 1) {
+          borboneLink.style.width = '72.5%';
+        } else {
+          borboneLink.style.width = '100%';
+        }
+        borboneLink.style.transition = 'none';
+        borboneLink.style.transform = 'translateX(100%)';
+        setTimeout(() => {
+          borboneLink.style.transition = 'transform 0.5s ease-in-out';
+          borboneLink.style.transform = 'translateX(0)';
+        }, 50);
+          }, 500);
+        }, 3000);
+      </script>
+
+      <a href="" class="link w-inline-block" data-description="Hypothetical ASEAN Banknote" style="background-color: #fd9d7e;" onclick="showLightbox(event, 'lightbox-asean')"><img src="./images/0_asean-wallet.png" loading="lazy" width="" alt="" class="img" /></a>
 
       <div id="lightbox-asean" class="lightbox" style="display:none;">
         <div class="lightbox-content">
@@ -95,7 +123,7 @@
         .lightbox-content {
           position: relative;
           margin: auto;
-          padding: 20px;
+          padding: 50px;
           width: 80%;
           max-width: 700px;
         }

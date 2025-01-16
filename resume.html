@@ -25,8 +25,8 @@
       n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
     }(window, document);
   </script>
-  <link href="images/favicon-x.svg" rel="shortcut icon" type="image/x-icon" />
-  <link href="images/app-icon.png" rel="apple-touch-icon" />
+   <!-- ./images/favicon/favicon-durian.png OR ./images/favicon-x.svg -->
+   <link href="./images/favicon/favicon-durian.png" rel="shortcut icon" type="image/x-icon" />
   <link href="css/style.css" rel="stylesheet" type="text/css" />
   <script type="text/javascript" src="js/script.js"></script>
 </head>
@@ -64,20 +64,32 @@
   <div class="section">
     <div class="container">
       <div class="div-block">
-        <a aria-label="Toggle dark / light mode" data-w-id="7474ce0a-a9d8-640d-00a1-64371ee68dfd" href="#" target="_blank" class="toggle w-inline-block">
+        
+        <!-- home button -->
+        <a href="index.html" class="home-button" style="position: absolute; top: 10px; left: -90px; top: 12px; text-decoration: none; color: inherit;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="transform: scale(0.85);">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+        </a>
+        
+        <!-- dark /light mode -->
+        <a aria-label="Toggle dark / light mode" data-w-id="7474ce0a-a9d8-640d-00a1-64371ee68dfd" href="#" target="_blank" style="position: absolute; left: -52px;" class="toggle w-inline-block">
           <div>
             <div data-is-ix2-target="1" class="lottie-animation" data-w-id="c4a95d10-c36c-46ee-240a-f78fa865e98e" data-animation-type="lottie" data-src="images/463-brightness.json" data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="10.510510082408667" data-duration="0" data-ix2-initial-state="58"></div>
           </div>
         </a>
-        <a href="mailto:tanx329@newschool.edu" target="_blank" class="clone w-inline-block">
-          <div>Get in Touch</div>
+
+        <!-- get in touch button -->
+        <a href="mailto:tanx329@newschool.edu" class="clone w-inline-block" onclick="navigator.clipboard.writeText('tanx329@newschool.edu'); var div = this.querySelector('div'); div.innerText = 'Email Copied!'; setTimeout(function() { div.innerText = 'Get in Touch'; }, 1500); return false;">
+          <div>Get in Touch </div>
+
           <div style="-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="cover"></div>
         </a>
       </div>
       <div class="u-mb-4 u-sm-2">
         <h1 class="heading">Xuan</h1>
         <div class="subheading">
-            <a href="tel:7175550177">(646) 284 2705</a>
+            <a href="tel:6462842705">(646) 284 2705</a>
             <div class="divider_ball"></div>
             <a href="#">tanx329@newschool.edu</a>
         </div>
@@ -96,27 +108,29 @@
             <ul aria-labelledby="label_experience" role="list" class="w-list-unstyled">
               <li class="job">
                 <div class="job_header">
-                  <img src="images/webflow.svg" loading="lazy" height="" alt="" class="job_image" />
+                  <img src="images/Prada-Logo-Dark-Thumb-Square.png" loading="lazy" height="100" alt="" class="job_image" />
                   <div>
-                    <h3 class="job_title">Exhibition Designer<br><span style="font-size: 16px; text-transform: uppercase;">Prada S.p.A.</span></h3>
+                    <h3 class="job_title">Exhibition Designer <br><span style="font-size: 16px; text-transform: uppercase;">Prada</span></h3>
                     <div class="job_date">March 2022 — February 2024</div>
                   </div>
                 </div>
                 <ul role="list" class="job_description-list">
                   <li class="job_description-list_item">
-                    <div>I’ve been mentoring, coaching, and leading a team of five designers on Webflow&#x27;s Growth organization.</div>
+                    <div><strong>Conceptualization and Design:</strong> Collaborated with the creative team to develop innovative exhibition concepts and design layouts that align with Prada’s brand and vision, creating immersive and visually engaging environments. <br><br>Thereby achieving a 15% increase in press coverage compared to previous editions of fashion shows and increased brand recognition by 25% through exhibitions that captivate an average of 30,000+ visitors per event.</div>
                   </li>
+                  <br>
                   <li class="job_description-list_item">
-                    <div>I’ve helped set and contribute to our product strategy for Growth from yearly plans to individual experiment product specs.</div>
+                    <div><strong>Collaboration and Execution:</strong> Worked closely with industry leading architects, and renown curators and technical teams to ensure seamless installation and execution of the exhibition, while managing resources, budget, and timelines effectively. <br><br>Thus resulting in a 98% on-time exhibition setup, adhering to budget constraints with a cost-saving of up to 15% per project.</div>
                   </li>
+                  <br>
                   <li class="job_description-list_item cc-last">
-                    <div>Created and led various processes for the larger Design team such as onboarding resources, guides for hiring, contributing to the design system, etc.</div>
+                    <div><strong>Visitor Experience and Evaluation:</strong> Conceptualised and realised exhibitions that engage visitors emotionally, considering elements like lighting and interactivity, and assess their success through anonymous feedback to make improvements for future events. <br><br> Hence clocking a 20% improvement in visitor satisfaction scores based on post-exhibition surveys and feedback analysis.</div>
                   </li>
                 </ul>
               </li>
               <li class="job">
                 <div class="job_header">
-                  <img src="images/loom.svg" loading="lazy" height="" alt="" class="job_image" />
+                  <img src="images/hb.png" loading="lazy" height="" alt="" class="job_image" />
                   <div>
                     <h3 class="job_title">Exhibition Designer <br><span style="font-size: 16px; text-transform: uppercase;">Hustle & Bustle</span></h3>
                     <div class="job_date">September 2019 — April 2020</div>
@@ -124,44 +138,58 @@
                 </div>
                 <ul role="list" class="job_description-list">
                   <li class="job_description-list_item">
-                    <div>I designed and shipped multiple video and screensharing features for Loom which are now used by tens of millions of people everyday.</div>
+                    <div><strong>Conceptualization, Design, and Client Collaboration:</strong> Collaborated closely with clients to understand their vision and create tailored exhibition concepts that align with their objectives. <br><br>Thereby delivering 30% more bespoke experiences, resulting in a 90% client satisfaction rate and a high rate of repeat business.</div>
                   </li>
+                  <br>
                   <li class="job_description-list_item">
-                    <div>Owned several growth experiments and features end to end, such as phone registration, onboarding improvements, and contact book syncing. Each of which had a positive MAU impact.</div>
+                    <div><strong>Collaboration, Execution, and Project Coordination:</strong> Worked with a multi-national and diverse team of designers, contractors, and vendors to ensure the smooth execution of exhibitions, managing timelines, budgets, and logistical challenges. <br><br>Hence achieved a 92% on-time project delivery rate while reducing overall costs by 19% through streamlined coordination.</div>
                   </li>
-                  <li class="job_description-list_item">
-                    <div>I love being part of the team by participating in design critiques, contributing reusable components to the design system, and helping with interviews.</div>
-                  </li>
+                  <br>
                   <li class="job_description-list_item cc-last">
-                    <div>Built and open-sourced design tools (Figma Plugins) to automate various design tasks which saved us time and helped to build the Discord design brand.</div>
+                    <div><strong>Visitor Engagement, Evaluation, and Impact Assessment:</strong> Conceptualised exhibitions that offer interactive and memorable experiences, while also gathering post-event feedback to refine future projects. 
+                    <br><br>Collectively achieving a 25% increase in visitor engagement, with a 20% rise in event-related social media activity and positive public feedback.</div>
                   </li>
                 </ul>
               </li>
               <li class="job">
                 <div class="job_header">
-                  <img src="images/zendesk.svg" loading="lazy" height="" alt="" class="job_image" />
+                  <img src="images/army.jpg" loading="lazy" height="" alt="" class="job_image" />
                   <div>
                     <h3 class="job_title">Bridging Combat Engineer <br><span style="font-size: 16px; text-transform: uppercase;">Singapore Armed Forces</span></h3>
                     <div class="job_date">October 2017 — August 2019</div>
                   </div>
                 </div>
                 <ul role="list" class="job_description-list">
+                  <li class="job_description-list_item">
+                    <div><strong>Bridging Operations and Tactical Support:</strong> Responsible for the planning, construction, and maintenance of temporary and tactical bridges to support military movements and operations. <br><br>Successfully completed over 40 bridge construction missions over the course of 2 years, ensuring 100% operational success in facilitating troop and equipment movement under combat conditions.</div>
+                  </li>
+                  <br>
+                  <li class="job_description-list_item">
+                    <div><strong>Team Leadership and Training:</strong> Led a team of fellow comnbat engineers in executing bridge installations while also training personnel on engineering techniques and safety procedures. <br><br> Completed bridge installations 20% faster than other teams in the same operation, with zero safety violations reported during high-risk missions.</div>
+                  </li>
+                  <br>
                   <li class="job_description-list_item cc-last">
-                    <div>Designed new features for Zendesk peripheral software and UX improvements to the Zendesk e-commerce site.</div>
+                    <div><strong>Logistical Coordination and Problem-Solving:</strong> Worked closely with logistics and command teams to ensure timely delivery of materials and resources required for bridge construction, overcoming environmental and terrain challenges. <br><br> Improving efficiency and ensuring the uninterrupted supply chain and facilitating strategic movements across difficult terrain.</div>
                   </li>
                 </ul>
               </li>
               <li class="job cc-last">
                 <div class="job_header">
-                  <img src="images/discord.svg" loading="lazy" height="" alt="" class="job_image" />
+                  <img src="images/bt.jpg" loading="lazy" height="" alt="" class="job_image" />
                   <div>
                     <h3 class="job_title">Graphic Design Intern <br><span style="font-size: 16px; text-transform: uppercase;">BreadTalk</span></h3>
                     <div class="job_date">February 2017 — August 2017</div>
                   </div>
                 </div>
                 <ul role="list" class="job_description-list">
+                  <li class="job_description-list_item">
+                    <div><strong>Design Creation and Brand Support:</strong> Assisted in creating visually appealing graphics for product packaging, marketing materials, and digital content, ensuring alignment with the company’s brand identity.  <br><br>Contributed to the design of over 30 product packaging concepts and promotional materials in 6 months.</div>
+                  </li>
+                  <br>
                   <li class="job_description-list_item cc-last">
-                    <div>Developed and designed multiple Drupal and Wordpress sites for clients such as Yale, Foreign Affairs, and other non-profits.</div>
+                    <div><strong>Collaboration and Content Development:</strong> Collaborate with the marketing team to design social media content, advertisements, and promotional campaigns.  <br><br> Assisted in content creation for social media campaigns that resulted in a 21% increase in online brand awareness and engagement.
+                    </div>
+
                   </li>
                 </ul>
               </li>
@@ -174,18 +202,18 @@
             <ul aria-labelledby="label_education" role="list" class="w-list-unstyled">
               <li>
                 <div class="u-mb-1">
-                  <div class="h6">MS Data Visualization</div>
+                  <div class="h6">MS. Data Visualization</div>
                   <div>Parsons School of Design, 2025<br><span style="font-size: 12px; text-transform: uppercase;">New York, United States</span></div>
                 </div>
                 <div>
-                  <div class="h6">BSc Industrial Design</div>
+                  <div class="h6">BSc. Industrial Design</div>
                     <div>Politecnico di Milano, 2024<br><span style="font-size: 12px; text-transform: uppercase;">Milan, Italy</span></div>
                 </div>
 
                 <div class="u-mb-1">
                 </div>
                 <div>
-                    <div class="h6">BSc Industrial Design <span style="font-size: 10px; color: #eb412b;">SEMESTER ABROAD</span></div>
+                    <div class="h6">BSc. Industrial Design <span style="font-size: 10px; color: #eb412b;">SEMESTER ABROAD</span></div>
                   <div>Middle East Technical University, 2024<br><span style="font-size: 12px; text-transform: uppercase;">Ankara, Türkiye</span></div>
                 </div>
 
@@ -213,7 +241,7 @@
                 <div class="u-mb-1">
                 </div>
                 <div>
-                  <div class="h6">BSc Industrial Design <span style="font-size: 10px; color: #eb412b;">SEMESTER ABROAD</span></div>
+                  <div class="h6">BSc. Industrial Design <span style="font-size: 10px; color: #eb412b;">SEMESTER ABROAD</span></div>
                   <div>Bezalel Academy of Arts & Design, 2022<br><span style="font-size: 12px; text-transform: uppercase;">Jerusalem, Israel</span></div>
                 </div>
                
@@ -275,6 +303,9 @@
                 <div>Database Query</div>
               </li> 
               <li>
+                <div>Natural Language Processing</div>
+              </li>
+              <li>
                 <div>Geospatial Visualizations</div>
               </li>
             </ul>
@@ -295,7 +326,7 @@
                 <div>Adobe lllustrator / Photoshop</div>
               </li>
               <li>
-                <div>Adobe Premiere Pro / After Effects</div>
+                <div>Adobe Premiere Pro <br> Adobe After Effects</div>
               </li>
               <li>
                 <div>Keyshot / Red Shift</div>
