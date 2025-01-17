@@ -2110,6 +2110,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
+/* thumbnails */
 .image-holder.img-2 {
   top: 45%;
   height: 70vh;
@@ -2120,10 +2121,11 @@ body {
   filter: brightness(1);
 }
 
+/* industrial */
 .image-holder.img-3 {
   top: 45%;
-  background-image: url("../images/ambitious-studio-rick-barrett-n_kZVc8-pKA-unsplash.jpg");
-  filter: brightness(0.9);
+  background-image: url("../images/shamblen-studios-CtJxZ1hHepM-unsplash.jpg");
+  filter: brightness(1);
 }
 
 .image-holder.img-1 {
