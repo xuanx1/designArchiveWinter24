@@ -241,14 +241,31 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" id="pdf-bootstrap" disabled>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" id="pdf-fontawesome" disabled>
 
+
 <script type="text/javascript">
     document.getElementById('read').addEventListener('click', function () {
         document.getElementById('pdf-bootstrap').disabled = false;
         document.getElementById('pdf-fontawesome').disabled = false;
     });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const observer = new MutationObserver(function (mutations) {
+            mutations.forEach(function (mutation) {
+                const closeButton = document.querySelector('span[data-name="btnClose"], span[title="Close"]');
+                if (closeButton) {
+                    closeButton.addEventListener('click', function () {
+                        document.getElementById('pdf-bootstrap').disabled = true;
+                        document.getElementById('pdf-fontawesome').disabled = true;
+                    });
+                    observer.disconnect();
+                }
+            });
+        });
+
+        observer.observe(document.body, { childList: true, subtree: true });
+    });
 </script>
 
-<button data-name="btnClose" id="close" onclick="location.reload();"></button>
 
   <!-- flipbook JS -->
   <script src="js/flipbook.min.js"></script>
