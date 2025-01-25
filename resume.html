@@ -79,6 +79,13 @@
           </div>
         </a>
 
+        <style>
+          .home-button:hover,
+          .toggle:hover {
+            color: lightgrey;
+          }
+        </style>
+
         <!-- get in touch button -->
         <a href="mailto:xuan.t7@proton.me" class="clone w-inline-block" onclick="navigator.clipboard.writeText('xuan.t7@proton.me'); var div = this.querySelector('div'); div.innerText = 'Email Copied!'; setTimeout(function() { div.innerText = 'Get in Touch'; }, 1500); return false;">
           <div>Get in Touch </div>
@@ -107,7 +114,7 @@
             <h2 id="label_experience" class="label">Personal Statement</h2>
             <ul aria-labelledby="label_experience" role="list" class="w-list-unstyled">
               <job_description-list_item">
-                    <div> Accomplished Data Visualization Designer with a unique blend of expertise in product design, storytelling, and data analysis, rooted in global exposure and adaptability, underpinning a commitment to innovative problem-solving in diverse environments. A cross over from Industrial Design to Data Visualization fosters a distinctive ability to bridge holistic design methodologies with analytical problem-solving. 
+                    <div> Accomplished Data Visualization Designer with a unique blend of expertise in product design, storytelling, and data analysis, rooted in global exposure and adaptability, underpinning a commitment to innovative problem-solving in diverse environments. A cross-over from Industrial Design to Data Visualization fosters a distinctive ability to bridge holistic design methodologies with analytical problem-solving. 
                     <br><br>
                     Experience spans user-centred industrial design for IKEA, exhibition curation for Prada and Milan Fashion Week, and data visualization projects with Smithsonian, showcasing a talent for transforming complex datasets into compelling, accessible narratives. 
                     <br><br>
@@ -413,11 +420,28 @@
   <script src="js/webflow-script-resume.js" type="text/javascript"></script>
 
   <footer>
-    <a href="#top" style="position: fixed; bottom: 10px; right: 10px; text-decoration: none; color: inherit;">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor" style="transform: scale(0.7);">
-        <path d="M12 2l-10 10h6v10h8v-10h6z"/>
+    <a href="#top" style="position: fixed; bottom: 10px; right: 18px; text-decoration: none; color: inherit; font-family: inherit; font-weight: 500; display: flex; align-items: center; opacity: 1; transition: opacity 0.3s;" onmouseover="this.style.opacity=0.5;" onmouseout="this.style.opacity=1;">
+      <svg width="24px" height="24px" viewBox="0 0 1.44 1.44" xmlns="http://www.w3.org/2000/svg" style="padding-right: 3px;">
+        <path d="M0 0h1.44v1.44H0z" fill="none"/>
+        <g id="Shopicon">
+          <path points="6.586,30.586 9.414,33.414 24,18.828 38.586,33.414 41.414,30.586 24,13.172" d="M0.198 0.918L0.282 1.002L0.72 0.565L1.158 1.002L1.242 0.918L0.72 0.395Z" fill="grey"/>
+        </g>
       </svg>
+      BACK TO TOP
     </a>
   </footer>
+
+  <script type="text/javascript">
+    // Change background color based on time of the day
+    document.addEventListener("DOMContentLoaded", function () {
+      var hour = new Date().getHours();
+      if (hour >= 6 && hour < 18) {
+        document.body.style.backgroundColor = "#ffffff"; // Light mode
+      } else {
+        document.body.style.backgroundColor = "#2c3e50"; // Dark mode
+      }
+    });
+  </script>
+
 </body>
 </html></div></li>

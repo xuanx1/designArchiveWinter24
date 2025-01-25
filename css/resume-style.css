@@ -307,6 +307,14 @@ li {
   text-transform: uppercase;
 }
 
+.toggle:hover {
+  opacity: 0.5;
+}
+
+.home-button:hover {
+  opacity: 0.5;
+}
+
 .div-block {
   position: absolute;
   left: auto;
