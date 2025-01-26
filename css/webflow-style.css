@@ -879,6 +879,10 @@ textarea.w-select {
     display: none !important;
   }
 
+  .nav-link.active {
+    display: none !important;
+}
+
   .w-row,
   .w-container .w-row {
     margin-left: 0;

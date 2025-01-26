@@ -164,7 +164,14 @@
             </nav>
             
             <nav role="navigation" id="w-node-5ccc5b71cc34" class="nav-menu w-nav-menu">
-                <a href="index.html" class="nav-link active w-nav-link">Work</a>
+                <a href="index.html" class="nav-link active w-nav-link" style="display: none;">Work</a>
+                <style>
+                    @media (min-width: 769px) {
+                        .nav-link.active {
+                            display: block;
+                        }
+                    }
+                </style>
                 <a href="resume.html" class="nav-link w-nav-link">Resume</a>
             </nav>
 
