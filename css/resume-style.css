@@ -328,6 +328,10 @@ li {
     font-size: 4.2em;
   }
 
+  .back-to-top {
+    display: none !important;
+  }
+
   .section {
     padding-top: 6em;
     padding-bottom: 6em;
