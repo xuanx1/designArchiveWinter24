@@ -419,7 +419,6 @@
   <script src="js/jquery-resume.js" type="text/javascript"></script>
   <script src="js/webflow-script-resume.js" type="text/javascript"></script>
 
-  add home buttom on top of get in touch during mobile
   <footer>
     <a href="#top" style="position: fixed; bottom: 10px; right: 18px; text-decoration: none; color: inherit; font-family: inherit; font-weight: 500; display: flex; align-items: center; opacity: 1; transition: opacity 0.3s;" onmouseover="this.style.opacity=0.5;" onmouseout="this.style.opacity=1;" class="back-to-top">
       <svg width="24px" height="24px" viewBox="0 0 1.44 1.44" xmlns="http://www.w3.org/2000/svg" style="padding-right: 3px;">
@@ -431,6 +430,13 @@
       BACK TO TOP
     </a>
   </footer>
+  <style>
+    @media (max-width: 767px) {
+      .back-to-top {
+        display: none;
+      }
+    }
+  </style>
 
 <!--<script type="text/javascript">
     // Change background color based on time of the day
