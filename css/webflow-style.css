@@ -871,6 +871,10 @@ textarea.w-select {
     display: inherit !important;
   }
 
+  #read {
+    display: none;
+}
+
   .w-hidden-medium {
     display: inherit !important;
   }
