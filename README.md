@@ -4,7 +4,7 @@
 ![desktop_mockup-03](https://github.com/user-attachments/assets/9ede2cef-664a-4c25-b9c3-0478358af1ff)
 
 
-## [Physical Portfolio](https://heyzine.com/flip-book/c49f6eeed2.html)
+## [Physical Portfolio](https://xuanx1.github.io/designArchiveWinter24/pdf/portfolio-lite.pdf)
 ![2](https://github.com/user-attachments/assets/9927e6ee-6ab1-4557-87e8-a6fb5f8780cc)
 ![content-cover](https://github.com/user-attachments/assets/50261058-442d-4c11-9fd2-6f7e5b2a39d9)
 ![project1](https://github.com/user-attachments/assets/acc10368-5f68-45af-9ac7-020bb40008b2)
